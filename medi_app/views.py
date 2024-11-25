@@ -79,3 +79,7 @@ def update_appointment(request, appointment_id):
     context = {'appointment': appointment}
     return render(request, "update_appointment.html", context)
 
+
+
+
+# Adding the mpesa functions
