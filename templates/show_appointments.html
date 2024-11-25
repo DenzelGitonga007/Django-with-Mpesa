@@ -29,7 +29,7 @@
             <td>
                 <a href="{% url 'medi_app:update_appointment' appointment.id %}" class="btn btn-primary">Edit</a>
                 <a href="{% url 'medi_app:delete_appointment' appointment.id %}" class="btn btn-danger">Delete</a>
-                <a href="" class="btn btn-success">Pay</a>
+                <a href="{% url 'medi_app:pay' %}" class="btn btn-success">Pay</a>
 
             </td>
         </tr>
