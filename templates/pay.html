@@ -1,4 +1,4 @@
-{% extend 'base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 
@@ -7,11 +7,12 @@
 <form method="post" action="{% url 'medi_app:stk' %}">
   {% csrf_token %}
     <label class="form-label" for="phone">Phone Number :</label>
-    <input class="form-control" type="number" id="phone" name="phone" value="254" placeholder="Phone Number">
+    <input type="number" id="phone" name="phone" value="254" placeholder="Phone Number">
     <br><br>
 
-    <label for="amount">Amount :</label>
-    <input class="form-control" type="text" id="amount" name="amount" placeholder="Amount">
+    <label class="form-label" for="amount">Amount :</label>
+    <input type="text" id="amount" name="amount" placeholder="Amount">
+
     <br><br>
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
