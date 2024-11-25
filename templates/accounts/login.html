@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+{% if messages %}
+<ul>
+  {% for message in messages %} 
+  <li style="color: {% if message.tags == 'error' %}red{% else %}green{% endif %};">
+    {{ message }}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+     <p>Login</p>
+    <!-- Login Form -->
+    <form method="post">
+        {% csrf_token %}
+      <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
